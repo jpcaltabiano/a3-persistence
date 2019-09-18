@@ -1,7 +1,7 @@
 // users: [
 //     {
-//         uname: 'name',
-//         pwd: 'pword',
+//         username: 'name',
+//         password: 'pword',
 //         trips: [
 //             {
 //                 tripname: 'wwr',
@@ -104,7 +104,8 @@ app.get('/index', checkAuth, function (req, res) {
 
 app.post('/trips', checkAuth, function(req, res) {
     const user = db.get('users').find(__user => __user.username === req.user.username);
-    let trips = user.get('trips').map('tripname').value();
+    // let trips = user.get('trips').map('tripname').value();
+    let trips = user.get('trips').value()
     let tripsjson = JSON.stringify(trips);
     res.json(tripsjson)
 })

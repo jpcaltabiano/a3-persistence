@@ -135,14 +135,19 @@ function rememberTrips() {
     .then(res => res.json())
     .then(function(json) {
         let trips = JSON.parse(json);
+        console.log(trips)
         list.forEach(t => {
             trips.forEach(i => {
-                if (t.innerHTML === i) {
+                if (t.innerHTML === i.tripname) {
                     let row = t.parentNode;
                     let btn = row.querySelector('#signup-btn');
+                    let gear = row.querySelector('#gear');
+                    let paid = row.querySelector('#paid-check');
                     row.style.backgroundColor = "#D0FFD6";
                     btn.style.background = "#FC5C7D";
                     btn.innerHTML = "Remove";
+                    gear.value = i.gear;
+                    paid.checked = i.paid;
                 }
             })
         })
