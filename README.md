@@ -1,6 +1,6 @@
 ## WPI Outing Club Trip Signup
 
-http://a3-charlieroberts.glitch.me
+http://a3-jpcaltabiano.glitch.me
 
 The website I made is a model of what a trip sign up page may look and act like for WPI Outing Clubs website. Users log in using a local strategy with passport.js. Entering a brand new username and password will create a new log in, but trying to use a different password with an existing username returns an error. They are presented with a table of trip information including the trip name, the dates, a selection of whether they need any gear, a check input for whether the trip has been paid for yet, and a sign up button. I am using basic lowdb for my database in a file called db.json. I chose this because it was the easiest to implement in this scenario. Signing up for a trip adds all the info from the form to that users record in the database. Once a trip has been added, changing the gear selection or the paid check wies in the database, and clicking the remove button deletes the trip from the database. I built my website using two CSS frameworks, tailwind and milligram. I liked the look of tailwind and the ease of cusotmization using their classes. Milligram was very helpful in making a clean looking and properly designed table and header. Modifcations to CSS are included in design achievements. 
 
